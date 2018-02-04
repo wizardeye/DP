@@ -9,7 +9,9 @@
 #ifndef BombedMazeGame_h
 #define BombedMazeGame_h
 
-#include "stdafx.h"
+#include "Wall.h"
+#include "Room.h"
+#include "MazeGame.h"
 
 class BombedWall: public Wall {};
 

@@ -9,7 +9,7 @@
 #ifndef MapSite_h
 #define MapSite_h
 
-#include "stdafx.h"
+#include <array>
 
 enum class Direction {
     NORTH = 0,
@@ -18,8 +18,7 @@ enum class Direction {
     WEST
 };
 
-const std::array<Direction, 4> all_Direction =
-    {Direction::NORTH, Direction::SOUTH, Direction::EAST, Direction::WEST};
+const std::array<Direction, 4> all_Direction = {Direction::NORTH, Direction::SOUTH, Direction::EAST, Direction::WEST};
 
 class MapSite {
 public:

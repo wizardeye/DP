@@ -9,7 +9,12 @@
 #ifndef MazeGame_h
 #define MazeGame_h
 
-#include "stdafx.h"
+#include "Maze.h"
+#include "Wall.h"
+#include "Door.h"
+#include "Room.h"
+#include "MazeFactory.h"
+#include "MazeBuilder.h"
 
 class MazeGame {
 public:

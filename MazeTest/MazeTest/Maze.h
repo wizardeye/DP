@@ -9,7 +9,8 @@
 #ifndef Maze_h
 #define Maze_h
 
-#include "stdafx.h"
+#include <map>
+#include "Room.h"
 
 class Maze {
 public:

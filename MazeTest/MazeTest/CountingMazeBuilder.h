@@ -9,7 +9,7 @@
 #ifndef CountingMazeBuilder_h
 #define CountingMazeBuilder_h
 
-#include "stdafx.h"
+#include "MazeBuilder.h"
 
 class CountingMazeBuilder: public MazeBuilder
 {

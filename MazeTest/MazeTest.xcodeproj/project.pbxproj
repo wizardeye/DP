@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1FF6F23D2025B41B00B787ED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F23C2025B41B00B787ED /* main.cpp */; };
+		1FF6F2822026AD8A00B787ED /* CountingMazeBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F2732026AD8A00B787ED /* CountingMazeBuilder.cpp */; };
+		1FF6F2832026AD8A00B787ED /* MazeGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F27A2026AD8A00B787ED /* MazeGame.cpp */; };
+		1FF6F2842026AD8A00B787ED /* StandardMazeBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F27E2026AD8A00B787ED /* StandardMazeBuilder.cpp */; };
+		1FF6F2872026B24300B787ED /* MazePrototypeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F2862026B24300B787ED /* MazePrototypeFactory.cpp */; };
+		1FF6F2892026B3D300B787ED /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FF6F2882026B3D300B787ED /* Wall.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,24 @@
 /* Begin PBXFileReference section */
 		1FF6F2392025B41B00B787ED /* MazeTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MazeTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF6F23C2025B41B00B787ED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1FF6F2722026AD8A00B787ED /* BombedMazeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BombedMazeGame.h; sourceTree = "<group>"; };
+		1FF6F2732026AD8A00B787ED /* CountingMazeBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CountingMazeBuilder.cpp; sourceTree = "<group>"; };
+		1FF6F2742026AD8A00B787ED /* CountingMazeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingMazeBuilder.h; sourceTree = "<group>"; };
+		1FF6F2752026AD8A00B787ED /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
+		1FF6F2762026AD8A00B787ED /* MapSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapSite.h; sourceTree = "<group>"; };
+		1FF6F2772026AD8A00B787ED /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
+		1FF6F2782026AD8A00B787ED /* MazeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeBuilder.h; sourceTree = "<group>"; };
+		1FF6F2792026AD8A00B787ED /* MazeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeFactory.h; sourceTree = "<group>"; };
+		1FF6F27A2026AD8A00B787ED /* MazeGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MazeGame.cpp; sourceTree = "<group>"; };
+		1FF6F27B2026AD8A00B787ED /* MazeGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MazeGame.h; sourceTree = "<group>"; };
+		1FF6F27C2026AD8A00B787ED /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		1FF6F27D2026AD8A00B787ED /* Spell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spell.h; sourceTree = "<group>"; };
+		1FF6F27E2026AD8A00B787ED /* StandardMazeBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StandardMazeBuilder.cpp; sourceTree = "<group>"; };
+		1FF6F27F2026AD8A00B787ED /* StandardMazeBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardMazeBuilder.h; sourceTree = "<group>"; };
+		1FF6F2812026AD8A00B787ED /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
+		1FF6F2852026B12800B787ED /* MazePrototypeFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MazePrototypeFactory.h; sourceTree = "<group>"; };
+		1FF6F2862026B24300B787ED /* MazePrototypeFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MazePrototypeFactory.cpp; sourceTree = "<group>"; };
+		1FF6F2882026B3D300B787ED /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +80,25 @@
 		1FF6F23B2025B41B00B787ED /* MazeTest */ = {
 			isa = PBXGroup;
 			children = (
+				1FF6F2722026AD8A00B787ED /* BombedMazeGame.h */,
+				1FF6F2732026AD8A00B787ED /* CountingMazeBuilder.cpp */,
+				1FF6F2742026AD8A00B787ED /* CountingMazeBuilder.h */,
+				1FF6F2752026AD8A00B787ED /* Door.h */,
+				1FF6F2762026AD8A00B787ED /* MapSite.h */,
+				1FF6F2772026AD8A00B787ED /* Maze.h */,
+				1FF6F2782026AD8A00B787ED /* MazeBuilder.h */,
+				1FF6F2792026AD8A00B787ED /* MazeFactory.h */,
+				1FF6F27A2026AD8A00B787ED /* MazeGame.cpp */,
+				1FF6F27B2026AD8A00B787ED /* MazeGame.h */,
+				1FF6F27C2026AD8A00B787ED /* Room.h */,
+				1FF6F27D2026AD8A00B787ED /* Spell.h */,
+				1FF6F27E2026AD8A00B787ED /* StandardMazeBuilder.cpp */,
+				1FF6F27F2026AD8A00B787ED /* StandardMazeBuilder.h */,
+				1FF6F2812026AD8A00B787ED /* Wall.h */,
 				1FF6F23C2025B41B00B787ED /* main.cpp */,
+				1FF6F2852026B12800B787ED /* MazePrototypeFactory.h */,
+				1FF6F2862026B24300B787ED /* MazePrototypeFactory.cpp */,
+				1FF6F2882026B3D300B787ED /* Wall.cpp */,
 			);
 			path = MazeTest;
 			sourceTree = "<group>";
@@ -118,7 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF6F2832026AD8A00B787ED /* MazeGame.cpp in Sources */,
+				1FF6F2842026AD8A00B787ED /* StandardMazeBuilder.cpp in Sources */,
 				1FF6F23D2025B41B00B787ED /* main.cpp in Sources */,
+				1FF6F2892026B3D300B787ED /* Wall.cpp in Sources */,
+				1FF6F2872026B24300B787ED /* MazePrototypeFactory.cpp in Sources */,
+				1FF6F2822026AD8A00B787ED /* CountingMazeBuilder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +283,7 @@
 				1FF6F2422025B41B00B787ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

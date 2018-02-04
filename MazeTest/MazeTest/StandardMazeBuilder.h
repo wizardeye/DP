@@ -9,7 +9,8 @@
 #ifndef StandardMazeBuilder_h
 #define StandardMazeBuilder_h
 
-#include "stdafx.h"
+#include "MazeBuilder.h"
+#include "Maze.h"
 
 class StandardMazeBuilder: public MazeBuilder
 {

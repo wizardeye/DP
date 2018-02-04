@@ -6,8 +6,8 @@
 //  Copyright © 2017년 air seok. All rights reserved.
 //
 
-#include <stdio.h>
 #include "MazeGame.h"
+#include "MazeFactory.h"
 
 Maze* MazeGame::createMaze(MazeFactory &factory) {
     Maze* aMaze = factory.makeMaze();

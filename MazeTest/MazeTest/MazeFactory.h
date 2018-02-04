@@ -9,11 +9,14 @@
 #ifndef MazeFactory_h
 #define MazeFactory_h
 
-#include "stdafx.h"
+#include "Maze.h"
+#include "Wall.h"
+#include "Door.h"
+#include "Room.h"
 
 class MazeFactory {
 public:
-//    MazeFactory();
+    MazeFactory();
     
     virtual Maze* makeMaze() const {
         return new Maze;
@@ -33,21 +36,21 @@ public:
 };
 
 
-class EnchantedMazeFactory: public MazeFactory {
-public:
-    virtual Room* makeRoom(int n) const {
-        return new EnchantedRoom(n, castSpell());
-    }
-    
-    virtual Door* makeDoor(Room* r1, Room* r2) const {
-        return new DoorNeedingSpell(r1, r2);
-    }
-    
-protected:
-    Spell* castSpell() const {
-        Spell* pSpell = new Spell;
-        return pSpell;
-    }
-};
+//class EnchantedMazeFactory: public MazeFactory {
+//public:
+//    virtual Room* makeRoom(int n) const {
+//        return new EnchantedRoom(n, castSpell());
+//    }
+//    
+//    virtual Door* makeDoor(Room* r1, Room* r2) const {
+//        return new DoorNeedingSpell(r1, r2);
+//    }
+//    
+//protected:
+//    Spell* castSpell() const {
+//        Spell* pSpell = new Spell;
+//        return pSpell;
+//    }
+//};
 
 #endif /* MazeFactory_h */

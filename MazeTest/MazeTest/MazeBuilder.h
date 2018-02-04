@@ -9,7 +9,7 @@
 #ifndef MazeBuilder_h
 #define MazeBuilder_h
 
-#include "stdafx.h"
+class Maze;
 
 //  미로 자체를 만들지 않고 미로를 생성하는 인터페이스를 정의한다.
 class MazeBuilder {

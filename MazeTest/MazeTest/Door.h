@@ -9,7 +9,8 @@
 #ifndef Door_h
 #define Door_h
 
-#include "stdafx.h"
+#include "MapSite.h"
+#include "Room.h"
 
 class Door: public MapSite {
 public:

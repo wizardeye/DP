@@ -7,6 +7,7 @@
 //
 
 #include "StandardMazeBuilder.h"
+#include "Door.h"
 
 void StandardMazeBuilder::BuildRoom(int n) {
     if (! _currentMaze->createRoom(n)) {

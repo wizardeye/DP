@@ -6,7 +6,9 @@
 //  Copyright © 2017년 air seok. All rights reserved.
 //
 
-#include "stdafx.h"
+#include <iostream>
+#include "MazeGame.h"
+#include "CountingMazeBuilder.h"
 
 int main(int argc, const char * argv[]) {
 //    MazeGame game;
