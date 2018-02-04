@@ -14,10 +14,10 @@
 
 class Wall: public MapSite {
 public:
-//    Wall() {}
+    Wall() {}
 //    Wall(const Wall&);
     
-//    virtual void Initialize(Wall*);
+    virtual void Initialize(Wall*);
 //    virtual Wall* Clone() const;
     
     virtual void Enter() {
@@ -25,7 +25,7 @@ public:
     }
     
 private:
-//    Wall* _wall;
+    Wall* _wall;
 };
 
 #endif /* Wall_h */

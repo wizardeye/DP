@@ -14,8 +14,8 @@
 //    _prototypeRoom = r;
 //    _prototypeDoor = d;
 //}
-//
-//
+
+
 //Wall* MazePrototypeFactory::MakeWall() const {
 //    return _prototypeWall->Clone();
 //}

@@ -9,7 +9,6 @@
 #ifndef Spell_h
 #define Spell_h
 
-#include "stdafx.h"
 
 class Spell {
 public:

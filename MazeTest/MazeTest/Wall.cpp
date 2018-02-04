@@ -12,12 +12,12 @@
 //    _wall = other._wall;
 //}
 
-//
-//void Wall::Initialize(Wall *w) {
-//    _wall = w;
-//}
-//
-//
+
+void Wall::Initialize(Wall *w) {
+    _wall = w;
+}
+
+
 //Wall* Wall::Clone() const {
 //    return new Wall(*this);
 //}
