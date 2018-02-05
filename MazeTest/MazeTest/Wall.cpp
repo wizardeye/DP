@@ -8,9 +8,9 @@
 
 #include "Wall.h"
 
-//Wall::Wall (const Wall& other) {
-//    _wall = other._wall;
-//}
+Wall::Wall (const Wall& other) {
+    _wall = other._wall;
+}
 
 
 void Wall::Initialize(Wall *w) {
@@ -18,6 +18,7 @@ void Wall::Initialize(Wall *w) {
 }
 
 
-//Wall* Wall::Clone() const {
-//    return new Wall(*this);
-//}
+Wall* Wall::Clone() const {
+    return new Wall(*this);
+}
+

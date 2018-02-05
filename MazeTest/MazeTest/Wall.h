@@ -15,10 +15,10 @@
 class Wall: public MapSite {
 public:
     Wall() {}
-//    Wall(const Wall&);
+    Wall(const Wall&);
     
     virtual void Initialize(Wall*);
-//    virtual Wall* Clone() const;
+    virtual Wall* Clone() const;
     
     virtual void Enter() {
         std::cout << "You are standing against the wall." << std::endl;

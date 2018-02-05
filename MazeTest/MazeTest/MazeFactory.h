@@ -16,7 +16,7 @@
 
 class MazeFactory {
 public:
-    MazeFactory();
+    MazeFactory() {}
     
     virtual Maze* makeMaze() const {
         return new Maze;

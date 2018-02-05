@@ -10,11 +10,20 @@
 #define MazePrototypeFactory_h
 
 #include "MazeFactory.h"
+#include "Maze.h"
+#include "Room.h"
+#include "Wall.h"
+#include "Door.h"
 
 class MazePrototypeFactory: public MazeFactory
 {
 public:
-    MazePrototypeFactory(Maze*, Wall*, Room*, Door*);
+    MazePrototypeFactory(Maze* m, Wall* w, Room* r, Door* d): MazeFactory() {
+        _prototypeMaze = m;
+        _prototypeWall = w;
+        _prototypeRoom = r;
+        _prototypeDoor = d;
+    }
     
     virtual Maze* MakeMaze() const;
     virtual Room* MakeRoom(int) const;
