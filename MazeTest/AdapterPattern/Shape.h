@@ -16,8 +16,13 @@ public:
     Point(Coord x, Coord y) {}
 };
 
+class Shape;
+
 class Manipulator
 {
+public:
+    Manipulator() {}
+    Manipulator(const Shape& shape) {}
 };
 
 class Shape

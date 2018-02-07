@@ -18,7 +18,7 @@ void TextShape::BoundingBox(Point &bottomLeft, Point &topRight) {
 }
 
 Manipulator* TextShape::CreateManipulator() const {
-    return new Manipulator;
+    return new TextManipulator(this);
 }
 
 bool TextShape::IsEmpty() const {

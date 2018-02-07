@@ -9,5 +9,20 @@
 #ifndef TextShape2_h
 #define TextShape2_h
 
+#include "Shape.h"
+#include "TextView.h"
+
+class TextShape2: public Shape
+{
+public:
+    TextShape2(TextView* text);
+    
+    virtual void BoundingBox(Point& bottomLeft, Point& topRight) const;
+    virtual bool IsEmpty() const;
+    virtual Manipulator* CreateManipulator() const;
+    
+private:
+    TextView* _text;
+};
 
 #endif /* TextShape2_h */

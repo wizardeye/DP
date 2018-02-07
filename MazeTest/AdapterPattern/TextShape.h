@@ -22,4 +22,11 @@ public:
     virtual Manipulator* CreateManipulator() const;
 };
 
+class TextManipulator: public Manipulator
+{
+public:
+    TextManipulator(const TextShape* shape): Manipulator(*shape)
+    {}
+};
+
 #endif /* TextShape_h */
