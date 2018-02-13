@@ -17,7 +17,7 @@ class Point;
 class Window
 {
 public:
-    Window(View* contents);
+    Window(View* contents): _contents(contents) {}
     
     virtual void Open();
     virtual void Close();
@@ -30,7 +30,12 @@ public:
     virtual void Lower();
     
     virtual void DrawLine(const Point&, const Point&);
-    virtual void DrawRect(const Point&, const Point&);
+    
+    virtual void DrawRect(const Point& p1, const Point& p2) {
+        WindowImp* imp = GetWindowImp();
+        imp->DeviceRect(p1.X(), p1.Y(), p2.X(), p2.Y());
+    }
+    
     virtual void DrawPolygon(const Point[], int n);
     virtual void DrawText(const char*, const Point&);
     
@@ -43,7 +48,9 @@ protected:
         return _imp;
     }
     
-    View* GetView();
+    View* GetView() {
+        return _contents;
+    }
     
 private:
     WindowImp* _imp;

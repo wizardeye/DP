@@ -9,11 +9,10 @@
 #ifndef WindowImp_h
 #define WindowImp_h
 
-#include "Window.h"
 #include <math>
 #inlcude <algorithm>
 #include <stdlib>
-
+#include "Window.h"
 
 class Coord;
 
@@ -28,6 +27,8 @@ public:
     virtual void DeviceRect(Coord, Coord, Coord, Coord) = 0;
     virtual void DeviceText(const char*, Coord, Coord) = 0;
     virtual void DeviceBitmap(const char*, Coord, Coord) = 0;
+    
+    virtual void DrawOn(Window*) = 0;
     
 protected:
     WindowImp();
@@ -51,6 +52,8 @@ public:
         int h = round(abs(y0 - y1));
         XDrawRectangle(_dpy, _winid, _gc, x, y, w, h);
     }
+    
+    virtual void DrawOn(Window* w) {}
     
 private:
     Display* _dpy;
@@ -87,6 +90,8 @@ public:
             GpiStrokePath(_hps, 1L, 0L);
         }
     }
+    
+    virtual void DrawOn(Window* w) {}
     
 private:
     HPS _hps;

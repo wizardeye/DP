@@ -16,7 +16,7 @@
 
 class MazeFactory {
 public:
-    MazeFactory() {}
+    static MazeFactory* Instance();
     
     virtual Maze* makeMaze() const {
         return new Maze;
@@ -33,8 +33,21 @@ public:
     virtual Door* makeDoor(Room* r1, Room* r2) const {
         return new Door(r1, r2);
     }
+    
+protected:
+    MazeFactory() {}
+    
+private:
+    const char* getenv(const char* s) {
+        return s;
+    }
+    
+    static MazeFactory* _instance;
 };
 
+MazeFactory* MazeFactory::_instance = nullptr;
+
+class BombedMazeFactory: public MazeFactory {};
 
 class EnchantedMazeFactory: public MazeFactory {
 public:
@@ -53,4 +66,20 @@ protected:
     }
 };
 
+
+MazeFactory* MazeFactory::Instance() {
+    if (_instance == nullptr) {
+        const char* mazeStyle = "MAZESTYLE";
+        
+        if (strcmp(mazeStyle, "bombed") == 0) {
+            _instance = new BombedMazeFactory;
+        } else if (strcmp(mazeStyle, "enchanted") == 0) {
+            _instance = new EnchantedMazeFactory;
+        }
+        
+        _instance = new MazeFactory;
+    }
+    
+    return _instance;
+}
 #endif /* MazeFactory_h */
