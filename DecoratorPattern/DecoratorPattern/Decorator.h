@@ -25,7 +25,7 @@ private:
 
 
 void Decorator::Draw() {
-    _component->Draw();
+    _component->Draw();     //  기존 구현을 가져온다.
 }
 
 void Decorator::Resize() {

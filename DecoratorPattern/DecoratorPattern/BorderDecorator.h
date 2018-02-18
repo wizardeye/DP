@@ -26,8 +26,8 @@ private:
 
 
 void BorderDecorator::Draw() {
-    Decorator::Draw();
-    DrawBorder();
+    Decorator::Draw();  //  Original fn
+    DrawBorder();   //  Decorated fn
 }
 
 void BorderDecorator::DrawBorder() {
