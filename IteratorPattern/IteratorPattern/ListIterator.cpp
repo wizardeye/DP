@@ -16,28 +16,26 @@ public:
     int _Code;
 };
 
-ListIterator::ListIterator(const std::list<int>* aList): Iterator() {
-    _list = aList;
+template <class Item>
+ListIterator<Item>::ListIterator(const std::list<Item>* aList): _list(aList), _current(0) {}
+
+template <class Item>
+void ListIterator<Item>::First() {
     _current = 0;
 }
 
-
-void ListIterator::First() {
-    _current = 0;
-}
-
-
-void ListIterator::Next() {
+template <class Item>
+void ListIterator<Item>::Next() {
     _current++;
 }
 
-
-bool ListIterator::IsDone() const {
+template <class Item>
+bool ListIterator<Item>::IsDone() const {
     return _current >= _list->size();
 }
 
-
-int ListIterator::CurrentItem() const {
+template <class Item>
+Item ListIterator<Item>::CurrentItem() const {
     try {
         if (IsDone())
             throw IteratorOutOfBounds(7);
@@ -49,40 +47,3 @@ int ListIterator::CurrentItem() const {
     //  custom List must support to access List's elements
     return _list->front();  //  _list->Get(_current);
 }
-
-
-//template <class Item>
-//ListIterator<Item>::ListIterator(const std::list<Item>* aList): Iterator<Item>() {
-//    _list = aList;
-//    _current = 0;
-//}
-//
-//template <class Item>
-//void ListIterator<Item>::First() {
-//    _current = 0;
-//}
-//
-//template <class Item>
-//void ListIterator<Item>::Next() {
-//    _current++;
-//}
-//
-//template <class Item>
-//bool ListIterator<Item>::IsDone() const {
-//    return _current >= _list->size();
-//}
-//
-//template <class Item>
-//Item ListIterator<Item>::CurrentItem() const {
-//    try {
-//        if (IsDone())
-//            throw IteratorOutOfBounds(7);
-//    }
-//    catch (IteratorOutOfBounds &e) {
-//        std::cout << "IteratorOutOfBounds: " << e._Code << std::endl;
-//    }
-//
-//    //  custom List must support to access List's elements
-//    return _list->front();  //  _list->Get(_current);
-//}
-

@@ -12,32 +12,18 @@
 #include "Iterator.h"
 #include <list>
 
-class ListIterator: public Iterator {
+template <class Item>
+class ListIterator: public Iterator<Item> {
 public:
-    ListIterator(const std::list<int>* aList);
+    ListIterator(const std::list<Item>* aList);
     virtual void First();
     virtual void Next();
     virtual bool IsDone() const;
-    virtual int CurrentItem() const;
-    
+    virtual Item CurrentItem() const;
+
 private:
-    const std::list<int>* _list;
+    const std::list<Item>* _list;
     long _current;
 };
-
-
-//template <class Item>
-//class ListIterator: public Iterator<Item> {
-//public:
-//    ListIterator(const std::list<Item>* aList);
-//    virtual void First();
-//    virtual void Next();
-//    virtual bool IsDone() const;
-//    virtual Item CurrentItem() const;
-//
-//private:
-//    std::list<Item>* _list;
-//    long _current;
-//};
 
 #endif /* ListIterator_h */
